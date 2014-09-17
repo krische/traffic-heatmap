@@ -12,7 +12,5 @@ before_script:
   - mkdir -p shippable/codecoverage
 
 script:
-  - flake8
-  - nosetests --with-xunit --xunit-file=shippable/testresults/nosetests.xml
-  - which python && coverage run --branch
-  - which python && coverage xml -o shippable/codecoverage/coverage.xml
+  - flake8 traffic_heatmap tests
+  - nosetests --with-xunit --xunit-file=shippable/testresults/nosetests.xml --cover-xml-file=shippable/codecoverage/coverage.xml
