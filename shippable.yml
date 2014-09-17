@@ -13,4 +13,4 @@ before_script:
 
 script:
   - flake8 traffic_heatmap tests
-  - nosetests --with-xunit --xunit-file=shippable/testresults/nosetests.xml --with-coverage --cover-xml-file=shippable/codecoverage/coverage.xml
+  - nosetests --with-coverage --cover-branches --cover-xml-file=shippable/codecoverage/coverage.xml --with-xunit --xunit-file=shippable/testresults/nosetests.xml
