@@ -1,33 +1,5 @@
 from traffic_heatmap.util import number
-from nose.tools import eq_, ok_
-
-
-def test_is_number_valid_int_string():
-    ok_(number.is_number('1'))
-
-
-def test_is_number_valid_float_string():
-    ok_(number.is_number('1.1'))
-
-
-def test_is_number_invalid_string():
-    ok_(number.is_number('hello') is False)
-
-
-def test_is_number_valid_int():
-    ok_(number.is_number(1))
-
-
-def test_is_number_valid_float():
-    ok_(number.is_number(1.1))
-
-
-def test_is_number_valid_unicode():
-    ok_(number.is_number('٥'))
-
-
-def test_is_number_invalid_unicode():
-    ok_(number.is_number('©') is False)
+from nose.tools import eq_
 
 
 def test_drange_less_than_one():
